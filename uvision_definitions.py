@@ -48,7 +48,17 @@ class uVisionDefinitions():
                 'SFDFile': 'SFD\NXP\LPC176x5x\LPC176x5x.SFR',
             }
         },
-        'Cortex-M0': {
+        'STM32L152CB': {
+            'TargetOption': {
+                'Device': 'STM32L152CB',
+                'Vendor': 'STMicroelectronics',
+                'Cpu': 'IROM(0x08000000,0x20000) IRAM(0x20000000,0x4000) CPUTYPE("Cortex-M3") CLOCK(32000000) ELITTLE',
+                'FlashDriverDll': 'UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32L1xx_384 -FS08000000 -FL060000 -FP0($$Device:STM32L152CB$Flash\STM32L1xx_128.FLM))',
+                'DeviceId': 6512,
+                'SFDFile': 'SFD\ST\STM32L1xx\own\STM32L15xxxA.SFR',
+            }
+        },
+       'Cortex-M0': {
             'TargetOption': {
                 'Device': 'Cortex-M0',
                 'Vendor': 'ARM',
