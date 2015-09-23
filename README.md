@@ -1,5 +1,5 @@
 # Project generator
-[![Build Status](https://travis-ci.org/matthewelse/project_generator.svg?branch=master)](https://travis-ci.org/matthewelse/project_generator)
+[![Build Status](https://travis-ci.org/project-generator/project_generator.svg?branch=master)](https://travis-ci.org/project-generator/project_generator)
 
 Source code is often times simple but building it is difficult when more than one person is involved.
 Developers like what they like: IDE, compiler, debugger and really all we want is to produce an executable.
@@ -21,17 +21,31 @@ Project generator currently generaters projects for the following tools (IDE, Ma
  - IAR
  - CoIDE (GCC ARM)
  - Eclipse (Makefile with GCC ARM)
+ - Sublime (Makefile with GCC ARM)
 
 We appreciate any help and you are more than welcome to send a pull request or create a new issue in this repository.
-The plan is to support as many IDE as possible , same applies for MCU.
+The plan is to support as many IDE as possible , same applies for targets/MCU.
 
 ### How to use it
 
-In your project directory create a tools folder and clone this repo. There are examples in c0170 github, so check them out!
+There are two options, how to use it. Either you download [pypi package](https://pypi.python.org/pypi/project_generator) or you can clone this repository to your project directory.
 
-To get familiar with it, read our wiki. Good start is [Getting started guide (wiki)](https://github.com/0xc0170/project_generator/wiki/Getting_started).
+##### Using package
+Once installed, test if project_generator is recognized:
 
-To get more information, visit the wiki pages here on github, where you can find how to add a new MCU, what options each tool provides, and so on.
+```
+pgen --version
+```
+This should print the current installed version. You can use pgen or project_generator as a command.
+
+##### Using directly the repository
+In case of using this repository directly, be aware, the project generator is using relative paths. To solve this, invoke run.py with arguments as you would if using the package. Something like: python run.py --version. This helps with debugging the package.
+
+##### Getting started
+
+An example how to use pgen [here](https://github.com/project-generator/project_generator_mbed_examples).
+
+To get familiar with it, read our wiki. Good start is [Getting started guide (wiki)](https://github.com/project-generator/project_generator/wiki/Getting_started). There are other sections which describe the each blocks of the project generator.
 
 Dependencies for Project generator
 -------------------------
@@ -39,3 +53,4 @@ Dependencies for Project generator
  * [pyYAML](https://github.com/yaml/pyyaml)
  * [Setuptools](https://pypi.python.org/pypi/distribute)
  * [Jinja2](https://pypi.python.org/pypi/Jinja2)
+ * [xmltodict](https://pypi.python.org/pypi/xmltodict)

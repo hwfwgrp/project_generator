@@ -56,3 +56,10 @@ docs/_build/
 .tags_sorted_by_file
 
 user_settings.py
+test_projects
+
+# Intelij files
+.idea
+
+# Mac files
+.DS_Store
